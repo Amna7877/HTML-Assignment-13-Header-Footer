@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header & footer</title>
+    <style>
+         @font-face {
+            font-family: 'Poppins-Regular';
+            src: url('fonts/Poppins-Regular.ttf');
+         }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins-Regular',  sans-serif;
+            background-color: #dbe6ff;
+        }
+
+        /*header*/
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 48px;
+            background-color: #fdf3f3;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .logo span {
+            color: #4154d2;
+        }
+
+         
+        nav a {
+            margin-left: 32px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #4154d2;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fdf3f3;
+            padding: 64px 48px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-text {
+            max-width: 50%;
+        }
+
+        .hero-text h1 {
+            font-size: 44px;
+            color: #374ad6;
+            margin-bottom: 16px;
+        }
+
+        .hero-text p {
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 24px;
+        }
+
+        .hero-text button {
+            padding: 12px 25px;
+            background-color: #4154d2;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero-text button:hover {
+            background-color: #2c3cb1;
+        }
+
+        .hero-image {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle-bg {
+            width: 300px;
+            height: 300px;
+            background-color: #bccfff;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 0;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 300px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* footer area*/
+
+        .footer {
+            background-color: #000;
+            color: #fff;
+            padding: 48px 32px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 32px;
+        }
+
+        .footer-column {
+            flex: 1 1 250px;
+        }
+
+        .footer h3 {
+            color: #4a90e2;
+            margin-bottom: 16px;
+        }
+
+        .footer p, .footer a{
+            color: #fff;
+            line-height: 1.5;
+            font-size: 15px;
+        }
+
+        .footer a {
+            display: block;
+            margin-bottom: 8px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #4a90e2;
+        }
+
+        .footer .input-group {
+            margin-top: 16px;
+        }
+
+        .footer input {
+            padding: 9px;
+            width: 100%;
+            max-width: 250px;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 12px;
+        }
+
+        .footer button {
+            padding: 16px 19px;
+            max-width: 250px;
+            width: 100%;
+            background-color: #4a90e2;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .footer button:hover {
+            background-color: #2560a8;
+        }
+
+
+        .footer-icons {
+            margin-top: 16px;
+        }
+
+        .footer-icons img {
+            width: 24px;
+            height: 24px;
+            margin: 12px;
+            justify-content: space-between;
+        }
+
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px auto 0;
+            padding: 0 24px;
+            gap: 48px;
+            max-width: 960px;
+        }
+
+        .contact-icons div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            color: #4a90e2;
+            font-size: 15px;
+        }
+
+        .contact-icons div img {
+            width: 20px;
+            height: 20px;
+
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 12px;
+            color: #fff;
+            border-top: 1px solid #5a5959;
+            padding: 20px;
+            box-sizing: border-box;
+            width: 100%;
+            margin-top: 48px;
+        }
+
+        @media (max-width: 786px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 16px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 12px 10px;
+            }
+
+            .hero {
+                flex-direction: column;
+                padding: 40px 20px;
+                text-align: center;
+            }
+
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .hero-image {
+                width: 100%;
+                height: auto;
+                margin-top: 20px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            .contact-icons {
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--header area-->
+    <header>
+        <div class="logo">Shop<span>.me</span></div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Men</a>
+            <a href="#">Women</a>
+            <a href="#">Kids</a>
+            <a href="#">Home & living</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Create website using <br>HTML & CSS</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis eveniet commodi sint iusto dolorum
+                velit debitis numquam quo adipisci quibusdam? Incidunt, cupiditate aliquid dolore quod perferendis
+                quidem vel aperiam hic.</p>
+            <button>Shop Now</button>
+        </div>
+
+        <div class="hero-image">
+            <div class="circle-bg"></div>
+            <img src="My asset/girl.png" alt="Girl in yellow outfit">
+        </div>
+    </section>
+
+    <!--Footer area-->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Company Name</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit voluptatum nihil quos odio commodi
+                veniam quaerat id quod aliquid eaque. Maxime cum amet quidem rerum, porro doloribus magnam optio!.</p>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <a href="#">FAQ</a>
+                <a href="#">Cookies Policy</a>
+                <a href="#">Terms Of Services</a>
+                <a href="#">Support</a>
+                <a href="#">Careers</a>
+            </div>
+
+            <div class="footer-column">
+                <h3>Subscribe To Newsletters</h3>
+                <div class="input-group">
+                    <input type="email" placeholder="Your email id here">
+                    <br>
+                    <button>Subscribe</button>
+                </div>
+
+                <div class="footer-icons">
+                    <img src="My asset/instagram-logo.png" alt="Instagram">
+                    <img src="My asset/facebook.png" alt="Facebook">
+                    <img src="My asset/twitter.png" alt="Twitter">
+                </div>
+            </div>
+
+        </div>
+        
+
+        <div class="contact-icons">
+            <div><img src="My asset/call.png" alt="Call"><span>+12 12345678</span></div>
+            <div><img src="My asset/email.png" alt="Email"><span>mail@domain.com</span></div>
+            <div><img src="My asset/pin.png" alt="Location"><span>1907 Pearl Street</span></div>
+        </div>
+
+        <div class="footer-bottom">
+            Copyright &copy; 2025 Coding Artist | All Rights Reserved.
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
